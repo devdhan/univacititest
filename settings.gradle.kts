@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Univaciti Cohort group 2"
+rootProject.name = "Day_1"
 include(":app")

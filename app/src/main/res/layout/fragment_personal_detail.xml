@@ -139,7 +139,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout7"
+        android:id="@+id/CreateConfirmPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -163,8 +163,8 @@
         android:layout_marginTop="20dp"
         style="@style/MyTextInputLayoutStyle"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+        app:layout_constraintStart_toStartOf="@+id/CreateConfirmPass"
+        app:layout_constraintTop_toBottomOf="@+id/CreateConfirmPass">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
