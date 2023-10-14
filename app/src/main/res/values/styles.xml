@@ -2,8 +2,9 @@
 <resources>
     <style name="MyTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="hintTextColor">#98A2B3</item>
-        <item name="boxStrokeColor">#EAECF0</item>
         <item name="boxStrokeWidth">1dp</item>
+        <item name="android:fillColor">#FFFFFF</item>
+        <item name="strokeColor">#EAECF0</item>
         <!-- Customize corner radius -->
         <item name="boxCornerRadiusTopStart">5dp</item>
         <item name="boxCornerRadiusTopEnd">5dp</item>
