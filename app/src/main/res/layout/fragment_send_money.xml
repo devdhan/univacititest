@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SendMoneyFragment">
+
+    <!-- Text view of Send Money -->
+
+    <!-- Back arrow icon -->
+
+    <TextView
+        android:id="@+id/confirmTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Send Money"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <ImageView
+        android:id="@+id/backButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/arrowleft"
+        app:layout_constraintBottom_toBottomOf="@+id/confirmTransaction"
+        app:layout_constraintEnd_toStartOf="@+id/confirmTransaction"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/confirmTransaction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Textbox for Enter amount -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterMoney3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="550dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeWidth="1dp"
+        app:helperText="Required*"
+        app:helperTextTextColor="#E40909"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTransaction">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:id="@+id/edtAmt"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- DropdownMenu for Select Debit Account -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectDebitAccount3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:helperText="Required*"
+        app:helperTextTextColor="#E40909"
+        android:hint="Select Debit account"
+        app:layout_constraintEnd_toEndOf="@+id/enterMoney3"
+        app:layout_constraintStart_toStartOf="@+id/enterMoney3"
+        app:layout_constraintTop_toBottomOf="@+id/enterMoney3">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none">
+
+            <!-- Additional attributes for AutoCompleteTextView can be added here -->
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- DropdownMenu for Select Credit Account -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/selectCreditAccount3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        app:helperText="Required*"
+        app:helperTextTextColor="#E40909"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Select Credit account"
+        app:layout_constraintEnd_toEndOf="@+id/selectDebitAccount3"
+        app:layout_constraintStart_toStartOf="@+id/selectDebitAccount3"
+        app:layout_constraintTop_toBottomOf="@+id/selectDebitAccount3">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none">
+
+            <!-- Additional attributes for AutoCompleteTextView can be added here -->
+        </AutoCompleteTextView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Narration -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/narration3"
+        android:layout_width="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/selectCreditAccount3"
+        app:layout_constraintStart_toStartOf="@+id/selectCreditAccount3"
+        app:layout_constraintTop_toBottomOf="@+id/selectCreditAccount3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Narration"
+            android:inputType="textMultiLine"
+            android:paddingBottom="60dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Proceed Button -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnProceed3"
+        app:backgroundTint="#0093DA"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        app:cornerRadius="5dp"
+        android:text="Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/narration3"
+        app:layout_constraintStart_toStartOf="@+id/narration3">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

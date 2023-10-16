@@ -19,4 +19,93 @@
         android:name="com.example.univacitiproject.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/addressInfo"
+        android:name="com.example.univacitiproject.AddressInfo"
+        android:label="fragment_address_info"
+        tools:layout="@layout/fragment_address_info" >
+        <action
+            android:id="@+id/action_addressInfo_to_bankVerification"
+            app:destination="@id/bankVerification" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankVerification"
+        android:name="com.example.univacitiproject.BankVerification"
+        android:label="fragment_bank_verification"
+        tools:layout="@layout/fragment_bank_verification" >
+        <action
+            android:id="@+id/action_bankVerification_to_phoneVerification"
+            app:destination="@id/phoneVerification" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginOne"
+        android:name="com.example.univacitiproject.LoginOne"
+        android:label="fragment_login_one"
+        tools:layout="@layout/fragment_login_one" >
+        <action
+            android:id="@+id/action_loginOne_to_resetPassword"
+            app:destination="@id/resetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetail"
+        android:name="com.example.univacitiproject.PersonalDetail"
+        android:label="fragment_personal_detail"
+        tools:layout="@layout/fragment_personal_detail" >
+        <action
+            android:id="@+id/action_personalDetail_to_addressInfo"
+            app:destination="@id/addressInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerification"
+        android:name="com.example.univacitiproject.PhoneVerification"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification" >
+        <action
+            android:id="@+id/action_phoneVerification_to_setPassword"
+            app:destination="@id/setPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassword"
+        android:name="com.example.univacitiproject.ResetPassword"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPassword_to_resetPasswordOtpFragment"
+            app:destination="@id/resetPasswordOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.univacitiproject.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.univacitiproject.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_personalDetail"
+            app:destination="@id/personalDetail" />
+        <action
+            android:id="@+id/action_signUp_to_loginOne"
+            app:destination="@id/loginOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/setPassword"
+        android:name="com.example.univacitiproject.SetPassword"
+        android:label="fragment_set_password"
+        tools:layout="@layout/fragment_set_password" />
+    <fragment
+        android:id="@+id/resetPasswordOtpFragment"
+        android:name="com.example.univacitiproject.ResetPasswordOtpFragment"
+        android:label="fragment_reset_password_otp"
+        tools:layout="@layout/fragment_reset_password_otp" >
+        <action
+            android:id="@+id/action_resetPasswordOtpFragment_to_createPasswordOneFragment"
+            app:destination="@id/createPasswordOneFragment" />
+    </fragment>
 </navigation>
