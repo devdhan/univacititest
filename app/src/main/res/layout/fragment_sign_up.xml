@@ -55,18 +55,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:background="#FFFFFF"
+        app:backgroundTint="@color/white"
         android:text="Login"
-        android:textColor="#0093DA"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/button5"
         app:layout_constraintStart_toStartOf="@+id/button5"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:strokeColor="#0093DA" />
+        app:strokeColor="#0093DA" >
+
+    </com.google.android.material.button.MaterialButton>
 
     <TextView
         android:id="@+id/textView16"

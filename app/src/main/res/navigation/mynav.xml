@@ -11,14 +11,21 @@
         android:label="fragment_create_password_one"
         tools:layout="@layout/fragment_create_password_one" >
         <action
-            android:id="@+id/action_createPasswordOneFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_createPasswordOneFragment_to_resetPasswordOtpFragment"
+            app:destination="@id/resetPasswordOtpFragment" />
+        <action
+            android:id="@+id/action_createPasswordOneFragment_to_waiting"
+            app:destination="@id/waiting" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.univacitiproject.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sendMoneyFragment"
+            app:destination="@id/sendMoneyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addressInfo"
         android:name="com.example.univacitiproject.AddressInfo"
@@ -27,6 +34,9 @@
         <action
             android:id="@+id/action_addressInfo_to_bankVerification"
             app:destination="@id/bankVerification" />
+        <action
+            android:id="@+id/action_addressInfo_to_personalDetail"
+            app:destination="@id/personalDetail" />
     </fragment>
     <fragment
         android:id="@+id/bankVerification"
@@ -36,6 +46,9 @@
         <action
             android:id="@+id/action_bankVerification_to_phoneVerification"
             app:destination="@id/phoneVerification" />
+        <action
+            android:id="@+id/action_bankVerification_to_addressInfo"
+            app:destination="@id/addressInfo" />
     </fragment>
     <fragment
         android:id="@+id/loginOne"
@@ -45,6 +58,9 @@
         <action
             android:id="@+id/action_loginOne_to_resetPassword"
             app:destination="@id/resetPassword" />
+        <action
+            android:id="@+id/action_loginOne_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/personalDetail"
@@ -63,6 +79,9 @@
         <action
             android:id="@+id/action_phoneVerification_to_setPassword"
             app:destination="@id/setPassword" />
+        <action
+            android:id="@+id/action_phoneVerification_to_bankVerification"
+            app:destination="@id/bankVerification" />
     </fragment>
     <fragment
         android:id="@+id/resetPassword"
@@ -72,6 +91,9 @@
         <action
             android:id="@+id/action_resetPassword_to_resetPasswordOtpFragment"
             app:destination="@id/resetPasswordOtpFragment" />
+        <action
+            android:id="@+id/action_resetPassword_to_loginOne"
+            app:destination="@id/loginOne" />
     </fragment>
     <fragment
         android:id="@+id/splashScreen"
@@ -98,7 +120,11 @@
         android:id="@+id/setPassword"
         android:name="com.example.univacitiproject.SetPassword"
         android:label="fragment_set_password"
-        tools:layout="@layout/fragment_set_password" />
+        tools:layout="@layout/fragment_set_password" >
+        <action
+            android:id="@+id/action_setPassword_to_phoneVerification"
+            app:destination="@id/phoneVerification" />
+    </fragment>
     <fragment
         android:id="@+id/resetPasswordOtpFragment"
         android:name="com.example.univacitiproject.ResetPasswordOtpFragment"
@@ -107,5 +133,36 @@
         <action
             android:id="@+id/action_resetPasswordOtpFragment_to_createPasswordOneFragment"
             app:destination="@id/createPasswordOneFragment" />
+        <action
+            android:id="@+id/action_resetPasswordOtpFragment_to_resetPassword"
+            app:destination="@id/resetPassword" />
     </fragment>
+    <fragment
+        android:id="@+id/sendMoneyFragment"
+        android:name="com.example.univacitiproject.SendMoneyFragment"
+        android:label="fragment_send_money"
+        tools:layout="@layout/fragment_send_money" >
+        <action
+            android:id="@+id/action_sendMoneyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendMoneyTwoFragment"
+        android:name="com.example.univacitiproject.SendMoneyTwoFragment"
+        android:label="fragment_send_money_two"
+        tools:layout="@layout/fragment_send_money_two" />
+    <fragment
+        android:id="@+id/waiting"
+        android:name="com.example.univacitiproject.Waiting"
+        android:label="fragment_waiting"
+        tools:layout="@layout/fragment_waiting" >
+        <action
+            android:id="@+id/action_waiting_to_accountCreatedFragment"
+            app:destination="@id/accountCreatedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountCreatedFragment"
+        android:name="com.example.univacitiproject.AccountCreatedFragment"
+        android:label="fragment_account_created"
+        tools:layout="@layout/fragment_account_created" />
 </navigation>
