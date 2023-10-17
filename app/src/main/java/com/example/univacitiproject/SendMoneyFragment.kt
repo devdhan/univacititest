@@ -34,7 +34,7 @@ class SendMoneyFragment : Fragment() {
 
             } else {
                 binding.btnProceed3.setOnClickListener {
-                    findNavController().navigate(R.id.action_sendMoneyFragment_to_sendMoneyTwoFragment)
+                  //  findNavController().navigate(R.id.action_sendMoneyFragment_to_sendMoneyTwoFragment)
                 }
             }
         }
