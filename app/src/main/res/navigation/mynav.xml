@@ -70,6 +70,9 @@
         <action
             android:id="@+id/action_personalDetail_to_addressInfo"
             app:destination="@id/addressInfo" />
+        <action
+            android:id="@+id/action_personalDetail_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/phoneVerification"
