@@ -22,16 +22,33 @@ class PersonalDetail : Fragment() {
         binding.button14.setOnClickListener {
             if (binding.surName.text.toString().isEmpty()
                 || binding.firstName.text.toString().isEmpty()
+                || binding.otherName.text.toString().isEmpty()
                 || binding.phoneNumber.text.toString().isEmpty()
                 || binding.email.text.toString().isEmpty()
                 || binding.dateOfBirth.text.toString().isEmpty()
                 && binding.referralCode.text.toString().isEmpty()
             ) {
-                Toast.makeText(
-                    requireActivity(),
-                    "This field cannot be empty",
-                    Toast.LENGTH_SHORT
-                ).show()
+                if(binding.surName.text.toString().isEmpty()){
+                    binding.surName.error = "Enter your Surname"
+                }
+                if(binding.firstName.text.toString().isEmpty()){
+                    binding.firstName.error = "Enter First Name"
+                }
+                if(binding.otherName.text.toString().isEmpty()){
+                    binding.otherName.error = "Enter Other name"
+                }
+                if(binding.phoneNumber.text.toString().isEmpty()){
+                    binding.phoneNumber.error = "Enter Phone Number"
+                }
+                if(binding.email.text.toString().isEmpty()){
+                    binding.email.error = "Enter Email"
+                }
+                if(binding.dateOfBirth.text.toString().isEmpty()){
+                    binding.dateOfBirth.error = "Enter Date of Birth"
+                }
+                if(binding.referralCode.text.toString().isEmpty()){
+                    binding.referralCode.error = "Enter Referral Code"
+                }
 
             } else {
                 findNavController().navigate(R.id.action_personalDetail_to_addressInfo)

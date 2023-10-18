@@ -21,11 +21,13 @@ class LoginOne : Fragment() {
         binding = FragmentLoginOneBinding.bind(view)
         binding.button8.setOnClickListener {
             if(binding.phoneNumber.text.toString().isEmpty() || binding.password.text.toString().isEmpty()){
-                Toast.makeText(
-                    requireActivity(),
-                    "This field cannot be empty",
-                    Toast.LENGTH_SHORT
-                ).show()
+                if(binding.phoneNumber.text.toString().isEmpty()){
+                    binding.phoneNumber.error = "Enter Phone Number"
+                }
+                if(binding.password.text.toString().isEmpty()){
+                    binding.password.error = "Enter password"
+                }
+
             }else{
                 findNavController().navigate(R.id.action_loginOne_to_resetPassword)
             }

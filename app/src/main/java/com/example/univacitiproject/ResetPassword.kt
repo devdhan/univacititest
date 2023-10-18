@@ -21,11 +21,9 @@ class ResetPassword : Fragment() {
         binding = FragmentResetPasswordBinding.bind(view)
         binding.button12.setOnClickListener {
             if(binding.phoneNumber.text.toString().isEmpty()){
-                Toast.makeText(
-                    requireActivity(),
-                    "This field cannot be empty",
-                    Toast.LENGTH_SHORT
-                ).show()
+                if(binding.phoneNumber.text.toString().isEmpty()){
+                    binding.phoneNumber.error = "Enter Phone Number"
+                }
             }else{
                 findNavController().navigate(R.id.action_resetPassword_to_resetPasswordOtpFragment)
             }
