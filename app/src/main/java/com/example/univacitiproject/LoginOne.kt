@@ -38,6 +38,20 @@ class LoginOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         rollBack()
+        proceed()
+        resetPassword()
+    }
+
+    private fun resetPassword() {
+        binding.textView40.setOnClickListener{
+            findNavController().navigate(R.id.action_loginOne_to_resetPassword)
+        }
+    }
+
+    private fun proceed() {
+        binding.button8.setOnClickListener{
+            findNavController().navigate(R.id.action_loginOne_to_homeFragment)
+        }
     }
 
     private fun rollBack() {

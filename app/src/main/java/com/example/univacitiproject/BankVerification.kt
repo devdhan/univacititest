@@ -38,6 +38,7 @@ class BankVerification : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         rollBack()
         closeButton()
+        proceed()
     }
 
     private fun closeButton() {
@@ -52,5 +53,10 @@ class BankVerification : Fragment() {
         }
     }
 
+    private fun proceed(){
+        binding.button9.setOnClickListener {
+            findNavController().navigate(R.id.action_bankVerification_to_phoneVerification)
+        }
+    }
 
 }
