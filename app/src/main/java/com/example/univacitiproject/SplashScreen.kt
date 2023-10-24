@@ -21,8 +21,6 @@ class SplashScreen : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_splash_screen, container, false)
         binding = FragmentSplashScreenBinding.bind(view)
-
-
         return view
     }
 
@@ -31,6 +29,7 @@ class SplashScreen : Fragment() {
         nextScreen()
     }
 
+    //Navigate to next screen after 3 seconds
     private fun nextScreen() {
         handler = Handler()
         handler!!.postDelayed({

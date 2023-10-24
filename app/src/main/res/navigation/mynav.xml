@@ -121,6 +121,9 @@
         <action
             android:id="@+id/action_signUp_to_loginOne"
             app:destination="@id/loginOne" />
+        <action
+            android:id="@+id/action_signUp_to_resetPassword"
+            app:destination="@id/resetPassword" />
     </fragment>
     <fragment
         android:id="@+id/setPassword"

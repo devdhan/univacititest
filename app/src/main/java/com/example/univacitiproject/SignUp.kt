@@ -19,13 +19,32 @@ class SignUp : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_sign_up, container, false)
         binding = FragmentSignUpBinding.bind(view)
-        binding.button5.setOnClickListener {
-            findNavController().navigate(R.id.action_signUp_to_personalDetail)
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        openAccount()
+        login()
+        reset()
+    }
+
+    private fun reset() {
+        binding.textView16.setOnClickListener {
+            findNavController().navigate(R.id.action_signUp_to_resetPassword)
         }
+    }
+
+    //Navigate to Login or SignUp Screen
+    private fun login() {
         binding.button6.setOnClickListener {
             findNavController().navigate(R.id.action_signUp_to_loginOne)
         }
+    }
 
-        return view
+    private fun openAccount() {
+        binding.button5.setOnClickListener {
+            findNavController().navigate(R.id.action_signUp_to_personalDetail)
+        }
     }
 }
