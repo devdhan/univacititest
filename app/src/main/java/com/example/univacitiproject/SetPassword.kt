@@ -44,6 +44,16 @@ class SetPassword : Fragment() {
                 }
             }
         }
+
+        rootView.findViewById<View>(R.id.imageView22).setOnClickListener {
+            // Navigate to the signupFragment
+            navController.navigate(R.id.signUp)
+        }
+        rootView.findViewById<View>(R.id.imageView21).setOnClickListener {
+            // Navigate to the signupFragment
+            navController.popBackStack()
+        }
+
         return rootView
     }
 }

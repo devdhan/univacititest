@@ -47,7 +47,7 @@ class AddressInfo : Fragment() {
 
     private fun closeButton() {
         binding.imageView16.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.action_addressInfo_to_signUp)
         }
     }
 

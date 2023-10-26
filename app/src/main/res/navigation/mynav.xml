@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_addressInfo_to_personalDetail"
             app:destination="@id/personalDetail" />
+        <action
+            android:id="@+id/action_addressInfo_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/bankVerification"
@@ -49,6 +52,9 @@
         <action
             android:id="@+id/action_bankVerification_to_addressInfo"
             app:destination="@id/addressInfo" />
+        <action
+            android:id="@+id/action_bankVerification_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/loginOne"
@@ -88,6 +94,9 @@
         <action
             android:id="@+id/action_phoneVerification_to_bankVerification"
             app:destination="@id/bankVerification" />
+        <action
+            android:id="@+id/action_phoneVerification_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/resetPassword"
@@ -133,6 +142,9 @@
         <action
             android:id="@+id/action_setPassword_to_phoneVerification"
             app:destination="@id/phoneVerification" />
+        <action
+            android:id="@+id/action_setPassword_to_signUp"
+            app:destination="@id/signUp" />
     </fragment>
     <fragment
         android:id="@+id/resetPasswordOtpFragment"
@@ -144,6 +156,9 @@
             app:destination="@id/createPasswordOneFragment" />
         <action
             android:id="@+id/action_resetPasswordOtpFragment_to_resetPassword"
+            app:destination="@id/resetPassword" />
+        <action
+            android:id="@+id/action_resetPasswordOtpFragment_to_resetPassword2"
             app:destination="@id/resetPassword" />
     </fragment>
     <fragment

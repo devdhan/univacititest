@@ -64,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter amount"
+            android:singleLine="true"
             android:id="@+id/edtAmt"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -86,6 +87,7 @@
             android:id="@+id/auto_complete_txt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:inputType="none">
 
             <!-- Additional attributes for AutoCompleteTextView can be added here -->
@@ -112,6 +114,7 @@
             android:id="@+id/auto_complete_txt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:inputType="none">
 
             <!-- Additional attributes for AutoCompleteTextView can be added here -->

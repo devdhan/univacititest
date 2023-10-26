@@ -13,7 +13,6 @@ import java.util.Calendar
 
 class PersonalDetail : Fragment() {
     private lateinit var binding: FragmentPersonalDetailBinding
-    private lateinit var dateOfBirthEditText: TextInputEditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,7 +21,6 @@ class PersonalDetail : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_personal_detail, container, false)
         binding = FragmentPersonalDetailBinding.bind(view)
-        dateOfBirthEditText = binding.dateOfBirth
 
         // Button click handler
         binding.button14.setOnClickListener {
@@ -39,12 +37,6 @@ class PersonalDetail : Fragment() {
                 findNavController().navigate(R.id.action_personalDetail_to_addressInfo)
             }
         }
-
-        // Set up date picker when dateOfBirthEditText is clicked
-        dateOfBirthEditText.setOnClickListener {
-            showDatePickerDialog()
-        }
-
         return view
     }
 
@@ -57,7 +49,7 @@ class PersonalDetail : Fragment() {
     private fun closeButton() {
         // Handle close button click
         binding.imageView11.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.action_personalDetail_to_signUp)
         }
     }
 
@@ -66,25 +58,5 @@ class PersonalDetail : Fragment() {
         binding.imageView12.setOnClickListener {
             findNavController().popBackStack()
         }
-    }
-
-    private fun showDatePickerDialog() {
-        val calendar = Calendar.getInstance()
-        val year = calendar.get(Calendar.YEAR)
-        val month = calendar.get(Calendar.MONTH)
-        val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-        val datePickerDialog = DatePickerDialog(
-            requireContext(),
-            { _, year, month, dayOfMonth ->
-                val selectedDate = "$dayOfMonth/${month + 1}/$year"
-                dateOfBirthEditText.setText(selectedDate)
-            },
-            year,
-            month,
-            day
-        )
-
-        datePickerDialog.show()
     }
 }

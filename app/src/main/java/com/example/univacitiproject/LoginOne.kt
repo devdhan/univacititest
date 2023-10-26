@@ -56,7 +56,7 @@ class LoginOne : Fragment() {
 
     private fun rollBack() {
         binding.imageView28.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.action_loginOne_to_signUp)
         }
     }
 }

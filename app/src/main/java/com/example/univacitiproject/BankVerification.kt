@@ -43,7 +43,7 @@ class BankVerification : Fragment() {
 
     private fun closeButton() {
         binding.imageView17.setOnClickListener {
-            findNavController().popBackStack()
+            findNavController().navigate(R.id.action_bankVerification_to_signUp)
         }
     }
 
